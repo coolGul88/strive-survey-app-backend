@@ -13,9 +13,30 @@ public class SurveyResult {
     @NotNull
     private String emailId;
     @JoinColumn(unique = true)
-    @OneToOne(cascade = CascadeType.ALL)
-    private Survey survey;
-    @JoinColumn(unique = true)
     @OneToMany(cascade = CascadeType.ALL)
     private List<Answer> answers;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
 }

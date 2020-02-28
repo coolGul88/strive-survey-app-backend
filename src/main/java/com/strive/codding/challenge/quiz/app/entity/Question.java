@@ -11,7 +11,20 @@ public class Question {
     @Column
     @NotNull
     private String question;
-    @ManyToOne
-    @JoinColumn
-    private Quiz quiz;
+
+    public Question(){
+
+    }
+
+    public Question(String question){
+        this.question = question;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getQuestion() {
+        return question;
+    }
 }

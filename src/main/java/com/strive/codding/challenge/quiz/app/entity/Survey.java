@@ -12,16 +12,16 @@ public class Survey {
     @NotNull
     @Column
     private String name;
-    @JoinColumn
-    @OneToOne
-    private Quiz quiz;
+    @Column
+    @NotNull
+    private Long quizId;
 
     public Survey() {
-
     }
 
-    public Survey(String name) {
+    public Survey( String name, Long quizId){
         this.name = name;
+        this.quizId = quizId;
     }
 
     public Long getId() {
@@ -32,7 +32,9 @@ public class Survey {
         return name;
     }
 
-    public Quiz getQuiz() {
-        return quiz;
+    public Long getQuiz() {
+        return quizId;
     }
+
+
 }

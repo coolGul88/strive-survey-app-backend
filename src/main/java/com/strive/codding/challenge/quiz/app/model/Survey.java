@@ -1,12 +1,19 @@
 package com.strive.codding.challenge.quiz.app.model;
 
 
-import com.strive.codding.challenge.quiz.app.entity.Quiz;
-
 public class Survey {
     private Long id;
     private String name;
     private Quiz quiz;
+
+    public Survey() {
+    }
+
+    public Survey(Long id, String name, Quiz quiz) {
+        this.id = id;
+        this.name = name;
+        this.quiz = quiz;
+    }
 
     public Long getId() {
         return id;

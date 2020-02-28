@@ -1,14 +1,21 @@
 package com.strive.codding.challenge.quiz.app.model;
 
-import com.strive.codding.challenge.quiz.app.entity.Question;
-import com.strive.codding.challenge.quiz.app.entity.Survey;
-
 import java.util.List;
 
 public class Quiz {
     private Long quizId;
     private List<Question> questions;
-    private Survey survey;
+    private Long survey;
+
+    public Quiz() {
+
+    }
+
+    public Quiz(Long quizId, List<Question> questions, Long survey) {
+        this.quizId = quizId;
+        this.questions = questions;
+        this.survey = survey;
+    }
 
     public Long getQuizId() {
         return quizId;
@@ -26,11 +33,11 @@ public class Quiz {
         this.questions = questions;
     }
 
-    public Survey getSurvey() {
+    public Long getSurvey() {
         return survey;
     }
 
-    public void setSurvey(Survey survey) {
+    public void setSurvey(Long survey) {
         this.survey = survey;
     }
 }

@@ -9,20 +9,21 @@ public class Quiz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long quizId;
-    @OneToMany(cascade = CascadeType.ALL)
-    private List<Question> questions;
-    @OneToOne
-    private Survey survey;
+    @ElementCollection
+    private List<Long> questions;
+
+    public Quiz() {
+    }
+
+    public Quiz( List<Long> questions){
+        this.questions = questions;
+    }
 
     public Long getQuizId() {
         return quizId;
     }
 
-    public List<Question> getQuestions() {
+    public List<Long> getQuestions() {
         return questions;
-    }
-
-    public Survey getSurvey() {
-        return survey;
     }
 }

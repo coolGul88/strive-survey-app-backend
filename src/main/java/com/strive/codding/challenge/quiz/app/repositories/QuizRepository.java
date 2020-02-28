@@ -8,6 +8,4 @@ import java.util.List;
 public interface QuizRepository extends PagingAndSortingRepository<Quiz, Long> {
 
     List<Quiz> findAll();
-
-    Quiz findBySurveyId(Long surveyId);
 }
