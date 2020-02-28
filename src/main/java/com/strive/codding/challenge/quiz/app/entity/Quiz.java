@@ -11,4 +11,6 @@ public class Quiz {
     private Long quizId;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Question> questions;
+    @OneToOne
+    private Survey survey;
 }
