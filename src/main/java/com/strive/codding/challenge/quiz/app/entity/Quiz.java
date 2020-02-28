@@ -13,4 +13,16 @@ public class Quiz {
     private List<Question> questions;
     @OneToOne
     private Survey survey;
+
+    public Long getQuizId() {
+        return quizId;
+    }
+
+    public List<Question> getQuestions() {
+        return questions;
+    }
+
+    public Survey getSurvey() {
+        return survey;
+    }
 }
