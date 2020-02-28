@@ -15,7 +15,7 @@ public class QuizController {
     private QuizRepository quizRepository;
 
     @GetMapping("/survey/{surveyId}/quiz")
-    public Quiz getQuizForSurvey(@PathVariable(name = "serveyId") long surveyId) {
+    public Quiz getQuizForSurvey(@PathVariable(name = "surveyId") long surveyId) {
         return quizRepository.findBySurveyId(surveyId);
     }
 }
